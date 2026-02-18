@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { buildSystemPrompt, buildUserPrompt } from "./prompt";
+import { buildSystemPrompt, buildUserPrompt } from "./prompt.js";
 import fs from "fs";
 const client = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 export async function* generateDietPlan(input) {

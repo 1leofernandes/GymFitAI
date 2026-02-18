@@ -1,6 +1,6 @@
 import type { FastifyInstance } from 'fastify';
-import { DietPlanRequestSchema } from '../types';
-import { generateDietPlan } from '../agent';
+import { DietPlanRequestSchema } from '../types.js';
+import { generateDietPlan } from '../agent.js';
 
 export async function planRoutes(app: FastifyInstance) {
 

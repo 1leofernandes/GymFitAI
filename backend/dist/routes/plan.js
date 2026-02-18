@@ -1,5 +1,5 @@
-import { DietPlanRequestSchema } from '../types';
-import { generateDietPlan } from '../agent';
+import { DietPlanRequestSchema } from '../types.js';
+import { generateDietPlan } from '../agent.js';
 export async function planRoutes(app) {
     app.post('/plan', async (request, reply) => {
         reply.raw.setHeader('Content-Type', 'text/plain; charset=utf-8');
