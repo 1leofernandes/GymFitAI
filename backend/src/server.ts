@@ -1,3 +1,4 @@
+import cors from "@fastify/cors"; 
 import Fastify from "fastify";
 import { planRoutes } from "./routes/plan.js";
 
@@ -5,6 +6,10 @@ const app = Fastify({
     logger: true,
 });
 
+await app.register(cors, {
+    origin: "*",
+    methods: ["GET", "POST"],
+});
 
 app.get("/", async (request, reply) => {
     return { message: "Hello, World!" };
