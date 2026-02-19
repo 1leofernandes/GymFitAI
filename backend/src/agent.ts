@@ -10,7 +10,7 @@ export async function* generateDietPlan(input: DietPlanRequest): AsyncIterable<s
         const diretrizes = fs.readFileSync("knowledge/diretrizes.md", "utf-8");
         
         const model = client.getGenerativeModel({ 
-            model: "gemini-1.5-flash",
+            model: "gemini-1.5-flash-preview",
             generationConfig: {
                 temperature: 0.6,
                 maxOutputTokens: 4096,
